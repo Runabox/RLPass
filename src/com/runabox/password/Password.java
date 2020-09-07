@@ -108,8 +108,10 @@ public class Password {
         int length = defaultLength + addedLength;
 
         for(int i = 0; i < length; i++){
+            //isCoN stands for (is character or number)
             boolean isCoN = random.nextBoolean();
             if(isCoN){
+                //isLoN stands for (is letter or number)
                 boolean isLoN = random.nextBoolean();
                 if(isLoN){
                     int rInt = random.nextInt(25);
@@ -121,7 +123,7 @@ public class Password {
                         sb.append(letterArray[rInt]);
                     }
                 } else {
-                    //"scheck" is to lower the probability of a number appearing
+                    //"scheck" (second check) is to lower the probability of a number appearing
                     boolean scheck = random.nextBoolean();
                     if(scheck){
                         int rInt = random.nextInt(25);
